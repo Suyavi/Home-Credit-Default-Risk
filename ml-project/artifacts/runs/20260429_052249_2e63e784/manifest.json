@@ -1,0 +1,62 @@
+{
+  "run_id": "20260429_052249_2e63e784",
+  "started_at": "2026-04-29T05:22:49.191972+00:00",
+  "finished_at": "2026-04-29T05:50:50.032187+00:00",
+  "config_path": "C:/Users/Techberry/Desktop/ml-project/configs/default.yaml",
+  "config": {
+    "project": {
+      "seed": 42
+    },
+    "logging": {
+      "level": "INFO"
+    },
+    "data": {
+      "raw_dir": "data/raw",
+      "processed_dir": "data/processed"
+    },
+    "training": {
+      "n_folds": 5,
+      "num_boost_round": 15000,
+      "early_stopping_rounds": 200,
+      "log_evaluation_period": 200
+    },
+    "artifacts": {
+      "runs_dir": "artifacts/runs"
+    },
+    "output": {
+      "models_dir": "models",
+      "reports_dir": "reports",
+      "model_filename": "trained_model.pkl",
+      "submission_filename": "submission.csv",
+      "cv_report_filename": "cv_summary.md",
+      "feature_importance_filename": "feature_importance_top.png"
+    },
+    "pipeline": {
+      "export_features": false,
+      "strict_validation": true
+    }
+  },
+  "metrics": {
+    "oof_roc_auc": 0.7911356121334658,
+    "fold_roc_aucs": [
+      0.7889603929904179,
+      0.7968945075510533,
+      0.7875505887018065,
+      0.7943112621967156,
+      0.7884527062734505
+    ],
+    "n_features": 352
+  },
+  "artifacts": {
+    "model_path": "models/trained_model.pkl",
+    "submission_path": "submission.csv"
+  },
+  "environment": {
+    "python": "C:\\Users\\Techberry\\anaconda3\\python.exe",
+    "python_version": "3.13.9"
+  },
+  "git": {
+    "commit": null,
+    "dirty": null
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "run_id": "20260429_065301_488916a6",
+  "started_at": "2026-04-29T06:53:01.046030+00:00",
+  "finished_at": "2026-04-29T07:14:55.866712+00:00",
+  "config_path": "C:/Users/Techberry/Desktop/ml-project/configs/default.yaml",
+  "config": {
+    "project": {
+      "seed": 42
+    },
+    "logging": {
+      "level": "INFO"
+    },
+    "data": {
+      "raw_dir": "data/raw",
+      "processed_dir": "data/processed"
+    },
+    "training": {
+      "n_folds": 5,
+      "num_boost_round": 15000,
+      "early_stopping_rounds": 200,
+      "log_evaluation_period": 200
+    },
+    "model_params": {
+      "num_leaves": 31,
+      "max_depth": 7,
+      "learning_rate": 0.02,
+      "min_child_samples": 70,
+      "min_child_weight": 0.001,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.7,
+      "bagging_freq": 5,
+      "reg_alpha": 0.5,
+      "reg_lambda": 0.52,
+      "min_gain_to_split": 0.0
+    },
+    "artifacts": {
+      "runs_dir": "artifacts/runs"
+    },
+    "output": {
+      "models_dir": "models",
+      "reports_dir": "reports",
+      "model_filename": "trained_model.pkl",
+      "submission_filename": "submission.csv",
+      "cv_report_filename": "cv_summary.md",
+      "feature_importance_filename": "feature_importance_top.png"
+    },
+    "pipeline": {
+      "export_features": false,
+      "strict_validation": true
+    }
+  },
+  "metrics": {
+    "oof_roc_auc": 0.7943932940401478,
+    "fold_val_roc_aucs": [
+      0.7907032306551962,
+      0.8003950856732932,
+      0.7914816631858922,
+      0.7985892153684311,
+      0.7909819414216369
+    ],
+    "n_features": 492,
+    "mean_train_val_auc_gap": 0.10739487770850922,
+    "fold_val_auc_std": 0.004179759011979028,
+    "mean_best_boosting_iteration": 1636.6
+  },
+  "artifacts": {
+    "model_path": "models/trained_model.pkl",
+    "submission_path": "submission.csv"
+  },
+  "environment": {
+    "python": "C:\\Users\\Techberry\\anaconda3\\python.exe",
+    "python_version": "3.13.9"
+  },
+  "git": {
+    "commit": null,
+    "dirty": null
+  }
+}

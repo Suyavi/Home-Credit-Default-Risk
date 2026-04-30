@@ -1,0 +1,35 @@
+# ML pipeline defaults — override with: python scripts/run_pipeline.py run --config path/to/overrides.yaml
+# (Merging multiple YAML files is not implemented; use a single file per run.)
+
+project:
+  seed: 42
+
+logging:
+  level: INFO  # DEBUG | INFO | WARNING | ERROR
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+
+training:
+  n_folds: 5
+  num_boost_round: 15000
+  early_stopping_rounds: 200
+  log_evaluation_period: 200
+
+artifacts:
+  runs_dir: artifacts/runs
+
+output:
+  models_dir: models
+  reports_dir: reports
+  model_filename: trained_model.pkl
+  submission_filename: submission.csv
+  cv_report_filename: cv_summary.md
+  feature_importance_filename: feature_importance_top.png
+
+pipeline:
+  # After feature engineering, persist wide tables (large disk use).
+  export_features: false
+  # Fail fast if raw files or minimal schema checks fail.
+  strict_validation: true
